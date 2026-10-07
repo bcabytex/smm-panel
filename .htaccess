@@ -1,0 +1,6 @@
+RewriteEngine On
+
+# Route everything to the public folder for InfinityFree hosting
+RewriteRule ^$ public/ [L]
+RewriteCond %{REQUEST_URI} !^/public/ [NC]
+RewriteRule ^(.*)$ public/$1 [L]
